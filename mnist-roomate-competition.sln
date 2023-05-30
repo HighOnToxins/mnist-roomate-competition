@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MnistRoomateCompetition", "MnistRoomateCompetition\MnistRoomateCompetition.csproj", "{CBE11BDD-E80E-47F1-A2ED-BF6B51A450B6}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MnistRoomateCompetition", "MnistRoomateCompetition\MnistRoomateCompetition.csproj", "{CBE11BDD-E80E-47F1-A2ED-BF6B51A450B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MachineLearningLibrary", "..\MachineLearningLibrary\MachineLearningLibrary\MachineLearningLibrary.csproj", "{6F360A13-C518-41FF-9327-F180108C8FE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,12 @@ Global
 		{CBE11BDD-E80E-47F1-A2ED-BF6B51A450B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBE11BDD-E80E-47F1-A2ED-BF6B51A450B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBE11BDD-E80E-47F1-A2ED-BF6B51A450B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F360A13-C518-41FF-9327-F180108C8FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F360A13-C518-41FF-9327-F180108C8FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F360A13-C518-41FF-9327-F180108C8FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F360A13-C518-41FF-9327-F180108C8FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

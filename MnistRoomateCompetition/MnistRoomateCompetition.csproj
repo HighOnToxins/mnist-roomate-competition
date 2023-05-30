@@ -15,4 +15,8 @@
         </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\MachineLearningLibrary\MachineLearningLibrary\MachineLearningLibrary.csproj" />
+    </ItemGroup>
+
 </Project>
