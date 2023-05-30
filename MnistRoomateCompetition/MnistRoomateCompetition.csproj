@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\MachineLearningLibrary\MachineLearningLibrary\MachineLearningLibrary.csproj" />
+      <ProjectReference Include="..\MachineLearningLibrary\MachineLearningLibrary\MachineLearningLibrary.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,0 +1,3 @@
+[submodule "MachineLearningLibrary"]
+	path = MachineLearningLibrary
+	url = https://github.com/HighOnToxins/MachineLearningLibrary.git
