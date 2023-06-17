@@ -1,9 +1,10 @@
 ﻿
 using MachineLearningLibrary;
+using System.IO;
 
 namespace MnistRoomateCompetition.ToxicAi;
 
-internal class ToxicMnistCategorizer: IMnistRecogniser
+public class ToxicMnistCategorizer: IMnistRecogniser
 {
     public IAgent mnistAgent;
 
@@ -15,38 +16,38 @@ internal class ToxicMnistCategorizer: IMnistRecogniser
 
     public ToxicMnistCategorizer(string path)
     {
-        try
-        {
-            mnistAgent = IAgent.LoadFromFile(path);
-        }
-        catch 
-        {
-            mnistAgent = InitAgent();
-        }
+        mnistAgent = InitAgent(path);
     }
 
-    private static IAgent InitAgent()
+    public static IAgent InitAgent(string path)
     {
-        IAgent[] layers = new IAgent[convolutionCount + 1];
-
-        for(int i = 0; i < convolutionCount; i++)
+        try
         {
-            int inputSize = Image.Rows - 1 - i * 2;
-            int outputSize = inputSize - 2;
-            layers[i] = new Convolution2DAgent(
-                kernalSize, kernalSize,
-                inputSize, inputSize,
-                outputSize, outputSize,
+            return IAgent.LoadFromFile(path);
+        }
+        catch
+        {
+            IAgent[] layers = new IAgent[convolutionCount + 1];
+
+            for(int i = 0; i < convolutionCount; i++)
+            {
+                int inputSize = Image.Rows - 1 - i * 2;
+                int outputSize = inputSize - 2;
+                layers[i] = new Convolution2DAgent(
+                    kernalSize, kernalSize,
+                    inputSize, inputSize,
+                    outputSize, outputSize,
+                    -randomStartRange, randomStartRange
+                );
+            }
+
+            layers[^1] = new AffineAgent(
+                smallImage, 10,
                 -randomStartRange, randomStartRange
             );
+
+            return new AgentComposite(layers);
         }
-
-        layers[^1] = new AffineAgent(
-            smallImage, 10, 
-            -randomStartRange, randomStartRange
-        );
-
-        return new AgentComposite(layers);
     }
 
     public Result Test(Image image)
@@ -64,4 +65,5 @@ internal class ToxicMnistCategorizer: IMnistRecogniser
         
         return new Result(result.ToArray());
     }
+
 }
