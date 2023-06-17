@@ -52,6 +52,7 @@ public class ToxicMnistCategorizer: IMnistRecogniser
 
     public Result Test(Image image)
     {
+        //TODO: Make Library more flexible in order to handle generic objects
         float[] data = new float[Image.Rows*Image.Rows];
         for(int x = 0; x < Image.Rows; x++)
         {
