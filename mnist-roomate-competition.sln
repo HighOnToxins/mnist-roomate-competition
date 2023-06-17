@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MnistRoomateCompetition", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MachineLearningLibrary", "MachineLearningLibrary\MachineLearningLibrary\MachineLearningLibrary.csproj", "{4AB40A3B-0490-471A-B359-61FA6DE3380F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToxicMnistTrainer", "ToxicMnistTrainer\ToxicMnistTrainer.csproj", "{787EF0FC-56F4-49BA-B87C-1A07EB8A5D01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4AB40A3B-0490-471A-B359-61FA6DE3380F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AB40A3B-0490-471A-B359-61FA6DE3380F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AB40A3B-0490-471A-B359-61FA6DE3380F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{787EF0FC-56F4-49BA-B87C-1A07EB8A5D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787EF0FC-56F4-49BA-B87C-1A07EB8A5D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{787EF0FC-56F4-49BA-B87C-1A07EB8A5D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{787EF0FC-56F4-49BA-B87C-1A07EB8A5D01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
